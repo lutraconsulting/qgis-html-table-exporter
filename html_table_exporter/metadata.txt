@@ -6,7 +6,7 @@
 name=HTML Table Exporter
 qgisMinimumVersion=3.0
 description=Exports a table as an HTML table with photos which can later be converted into a Word document.  Perfect for organising site visit photos.
-version=0.1.1
+version=0.2.0
 author=Lutra Consulting
 email=info@lutraconsulting.co.uk
 
@@ -20,7 +20,9 @@ repository=https://github.com/lutraconsulting/qgis-html-table-exporter
 
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-changelog=0.1.1 Minor fixes
+changelog=0.2.0 New features
+ - Added help
+ <p>0.1.1 Minor fixes
  - Updated homepage
  - Removed experimental
  <p>0.1 Initial release

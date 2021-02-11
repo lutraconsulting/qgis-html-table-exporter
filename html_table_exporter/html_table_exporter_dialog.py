@@ -26,6 +26,8 @@ import os
 
 from qgis.PyQt import uic
 from qgis.PyQt import QtWidgets
+from qgis.PyQt import QtGui
+from qgis.PyQt import QtCore
 
 # This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer
 FORM_CLASS, _ = uic.loadUiType(os.path.join(
@@ -44,10 +46,15 @@ class HTMLTableExporterDialog(QtWidgets.QDialog, FORM_CLASS):
         # #widgets-and-dialogs-with-auto-connect
         self.setupUi(self)
 
+        self.helpUrl = 'https://www.lutraconsulting.co.uk/blog/2021/02/10/batch-exporting-site-visit-photos-to-word/'
+
         # Populate layers combo
         for layer in self.iface.mapCanvas().layers():
             if layer.type() == 0:
                 # It's a vector layer
                 self.tableComboBox.addItem(layer.name())
+
+    def helpPressed(self):
+        QtGui.QDesktopServices.openUrl(QtCore.QUrl(self.helpUrl))
 
 
